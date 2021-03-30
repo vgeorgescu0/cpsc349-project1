@@ -1,0 +1,53 @@
+#icons {
+  text-align: right;
+  padding: 5%;
+  
+}
+
+.user {
+  margin: 10px;
+}
+
+.buttons {
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.buttons button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  margin: 0 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.reject {
+  background: rgb(255, 255, 255);
+}
+
+.like {
+  background: rgb(255, 136, 136);
+}
+
+/* For swipe feature */
+#board {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(179, 215, 226);
+}
+
+.card {
+    width: 320px;
+    height: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 1%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transform: translateX(-50%) translateY(-50%) scale(0.95);
+}

@@ -2,11 +2,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/swipe.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/allpages.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
   <title>Home Page</title>
 </head>
-<body>
-  <a href="./matched.html">Matched Icon</a><br />
-  <a href="./userprofile.html">User Profile Icon</a>
 
+<body>
+<!-- TODO: insert users' main photo to display -->
+  <div id="board">
+
+    <!-- User Profile and Matched Icons -->
+    <div id="icons">
+      <a class="matched" href="./matched.html"><i class="fas fa-heart fa-2x"></i></a>
+      <a class="user" href="./userprofile.html"><i class="far fa-user-circle fa-2x"></i></a>
+    </div>
+
+<!-- TODO: attach actions to buttons -->
+    <div class="buttons">
+      <button class="reject"><i class="far fa-times-circle fa-3x"></i></button>
+      <button class="like"><i class="far fa-heart fa-3x"></i></button>
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="/scripts/swipe.js"></script>
 </body>
 </html>
