@@ -5,6 +5,13 @@
 //initialize firebase
 var firebaseConfig = {
     //firebase config stuff
+    apiKey: "AIzaSyCDavyv2LxT_y1_zHFAEbIZGERxEfAZR5w",
+    authDomain: "cpsc349proj1.firebaseapp.com",
+    projectId: "cpsc349proj1",
+    storageBucket: "cpsc349proj1.appspot.com",
+    messagingSenderId: "86082763535",
+    appId: "1:86082763535:web:33203c129e9dcd42bbdc7a",
+    measurementId: "G-5M89DDYFFS"
       };
     
 
