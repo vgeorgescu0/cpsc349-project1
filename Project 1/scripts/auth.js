@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+
 //needs scripts
 
 //initialize firebase
@@ -62,6 +63,10 @@ auth.onAuthStateChanged(function(user){
         console.log('user logged in: ', user);
         window.location="home.html";
 
+        document.getElementById("signUp").style.display="none";
+        document.getElementById("signIn").style.display="none";
+        document.getElementById("signOut").style.display="block";
+
         setupUI(user);
 
         var email = user.email;
@@ -69,6 +74,11 @@ auth.onAuthStateChanged(function(user){
 
     }
     else{
+
+        document.getElementById("signUp").style.display="block";
+        document.getElementById("signIn").style.display="block";
+        document.getElementById("signOut").style.display="none";
+
         setupUI();
         console.log('user logged out');
         alert("No Active User");
