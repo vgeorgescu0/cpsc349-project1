@@ -11,40 +11,40 @@
     <nav class="z-depth-0 grey lighten-4">
       <div class="nav-wrapper container">
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="logged-in" style="display: none;">
-              <a href="#" class="grey-text modal-trigger" data-target="modal-account">User Profile</a>
+            <li class="logged-in">
+              <a href="userprofile.html" class="grey-text " data-target="profile">User Profile</a>
             </li>
-            <li class="logged-in" style="display: none;">
-              <a href="#" class="grey-text" id="logout">Logout</a>
+            <li class="logged-in" >
+              <a href="login.html" class="grey-text" data-target="signOut">Logout</a>
             </li>
-            <li class="logged-in" style="display: none;">
-              <a href="#" class="grey-text modal-trigger" data-target="modal-create">Matched</a>
+            <li class="logged-in" >
+              <a href="matched.html" class="grey-text " data-target="matched">Matched</a>
+            </li>
+            <li class="logged-out">
+              <a href="login.html" class="grey-text" data-target="login">Login</a>
             </li>
             <li class="logged-out" style="display: none;">
-              <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
-            </li>
-            <li class="logged-out" style="display: none;">
-              <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+              <a href="login.html" class="grey-text" data-target="signUp">Sign up</a>
             </li>
         </ul>
       </div>
     </nav>
 
-<h1>Log In</h1>
-<div id="formContainer">
-    <div id="header">
-    <input type="email" placeholder="email" id="email"/>
-    <input type="password" placeholder="password" id="password"/>
+<div style="text-align:center;"></div>
+  <h1>Login</h1>
+    <div id="formContainer">
+      <input type="email" placeholder="email" id="email"/>
+      <input type="password" placeholder="password" id="password"/>
 
-    <button onclick="signUp()" id="signUp">Paw Up </button>
-    <button onclick="signIn()" id="signIn">Paw In </button>
-    <button onclick="signOut()" id="signOut">Paw Out</button>
+      <button onclick="signUp()" id="signUp">Paw Up </button>
+      <button onclick="signIn()" id="signIn">Paw In </button>
+      <button onclick="signOut()" id="signOut">Paw Out</button>
     </div>
-</div>
 
-    <script src = "https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-    <script src = "https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-    <script src = "https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
     <script src="scripts/auth.js"></script>
     <script src="scripts/index.js"></script>
 
