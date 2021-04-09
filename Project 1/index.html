@@ -3,11 +3,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/stylesheets/allpages.css">
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
   <title>Login</title>
 </head>
 <body>
-  <a href="pages/home.html">Home</a><br />
-  <a href="pages/signup.html">Sign Up</a>
-  <a href="pages/login.html">Login</a>
+  <div class="links">
+    <a href="pages/home.html">Home</a><br />
+    <a href="pages/signup.html">Sign Up</a><br />
+    <a href="pages/login.html">Login</a>
+  </div>
+
+  <div class="form">
+
+    <h2>Add a Dog Form</h2>
+    <form id="add-dog-form">
+      <input text="text" name="name" placeholder="Name">
+      <input text="text" name="phone" placeholder="Phone Number">
+      <input text="text" name="location" placeholder="Location (City, State)">
+      <input text="text" name="img" placeholder="Image URL">
+      <button>Add Dog to Database</button>
+    </form>
+
+  </div>
+  
+
+  <script src="/scripts/firebase.js"></script>
 </body>
 </html>
