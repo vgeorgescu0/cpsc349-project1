@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/stylesheets/allpages.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
   <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
   <title>Login</title>
@@ -14,16 +15,22 @@
     <a href="pages/login.html">Login</a>
   </div>
 
-  <div class="form">
+  <div class="content">
 
-    <h2>Add a Dog Form</h2>
+    
+    
+    <h1>Add a Dog</h1>
     <form id="add-dog-form">
-      <input text="text" name="name" placeholder="Name">
-      <input text="text" name="phone" placeholder="Phone Number">
-      <input text="text" name="location" placeholder="Location (City, State)">
-      <input text="text" name="img" placeholder="Image URL">
+      <input text="text" name="name" placeholder="Name" required>
+      <input text="text" name="phone" placeholder="Phone Number" required>
+      <input text="text" name="location" placeholder="Location (City, State)" required>
+      <input text="text" name="img" placeholder="Image URL" required>
       <button>Add Dog to Database</button>
     </form>
+
+    <h1>List of Dogs</h1>    
+    <button onclick="getAll()">Update List</button>
+    <ul id="dog-list"></ul>
 
   </div>
   
