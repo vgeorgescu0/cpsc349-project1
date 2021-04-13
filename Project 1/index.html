@@ -9,6 +9,7 @@
   <title>Login</title>
 </head>
 <body>
+  <!-- Links to other pages on the website -->
   <div class="links">
     <a href="pages/home.html">Home</a><br />
     <a href="pages/signup.html">Sign Up</a><br />
@@ -18,7 +19,7 @@
   <div class="content">
 
     
-    
+    <!-- Form to add dogs into Firestore -->
     <h1>Add a Dog</h1>
     <form id="add-dog-form">
       <input text="text" name="name" placeholder="Name" required>
@@ -28,9 +29,14 @@
       <button>Add Dog to Database</button>
     </form>
 
+    <!-- List of all dogs currently in firestore database -->
     <h1>List of Dogs</h1>    
     <button onclick="getAll()">Update List</button>
     <ul id="dog-list"></ul>
+
+    <!-- List of all dogs that have been swiped right -->
+    <h1>Right Swipes</h1>
+    <ul id="right-swipes"></ul>
 
   </div>
   
