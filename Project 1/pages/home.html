@@ -2,10 +2,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/swipe.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
   <link rel="stylesheet" type="text/css" href="/stylesheets/allpages.css">
   <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
   <title>Home Page</title>
 </head>
 
@@ -26,7 +27,13 @@
     </div>
 
   </div>
+  <div class="content">
+    <h1>Matches</h1>
+    <ul id="right-swipes"></ul>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="/scripts/firebase.js"></script>
+  <script src="/scripts/home.js"></script>
   <script src="/scripts/swipe.js"></script>
 </body>
 </html>

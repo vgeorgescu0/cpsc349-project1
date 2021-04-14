@@ -3,8 +3,15 @@ class Carousel {
       this.board = element
 
       // add first two cards programmatically
-      this.push()
-      this.push()
+      randomNum = Math.floor(Math.random() * 50) + 1
+      currentImageTop = "/img/dog" + randomNum + ".jpg"
+      url = "url('" + currentImageTop + "')"
+      this.push(url)
+      
+      randomNum = Math.floor(Math.random() * 50) + 1
+      currentImageBottom = "/img/dog" + randomNum + ".jpg"
+      url = "url('" + currentImageBottom + "')"
+      this.push(url)
 
       // handle gestures
       this.handle()
@@ -140,8 +147,10 @@ class Carousel {
           if (propX > 0.25 && e.direction == Hammer.DIRECTION_RIGHT) {
 
               successful = true
+              get(currentImageTop)
               // get right border position
               posX = this.board.clientWidth
+              
 
           } else if (propX < -0.25 && e.direction == Hammer.DIRECTION_LEFT) {
 
@@ -149,13 +158,13 @@ class Carousel {
               // get left border position
               posX = -(this.board.clientWidth + this.topCard.clientWidth)
 
-          } else if (propY < -0.25 && e.direction == Hammer.DIRECTION_UP) {
+           } //else if (propY < -0.25 && e.direction == Hammer.DIRECTION_UP) {
 
-              successful = true
-              // get top border position
-              posY = -(this.board.clientHeight + this.topCard.clientHeight)
+        //       successful = true
+        //        get top border position
+        //       posY = -(this.board.clientHeight + this.topCard.clientHeight)
 
-          }
+        //   } COMMENTED OUT DUE TO NO USE FOR UP SWIPE
 
           if (successful) {
 
@@ -168,7 +177,11 @@ class Carousel {
                   // remove swiped card
                   this.board.removeChild(this.topCard)
                   // add new card
-                  this.push()
+                  currentImageTop = currentImageBottom
+                  randomNum = Math.floor(Math.random() * 50) + 1
+                  currentImageBottom = "/img/dog" + randomNum + ".jpg"
+                  url = "url('" + currentImageBottom + "')"
+                  this.push(url)
                   // handle gestures on new top card
                   this.handle()
               }, 200)
@@ -189,15 +202,20 @@ class Carousel {
 
 // TODO: This creates card div in html, replace it with user's main photos.
 // It also pushes card off stack
-  push() {
+  
+  push(url) {
       let card = document.createElement('div')
       card.classList.add('card')
-      card.style.backgroundImage =
-          "url('https://picsum.photos/320/320/?random=" + Math.round(Math.random() * 1000000) + "')"
-      this.board.insertBefore(card, this.board.firstChild)
+    card.style.backgroundImage = url  
+    this.board.insertBefore(card, this.board.firstChild)
   }
 
 }
+
+var currentImageTop;
+var currentImageBottom;
+var randomNum;
+var url;
 
 let board = document.querySelector('#board')
 
