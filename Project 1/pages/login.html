@@ -3,44 +3,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/stylesheets/allpages.css">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/signup.css">
   <title>Login</title>
 </head>
 <body>
     <a href="./home.html">Back to Home Page</a>
-    <nav class="z-depth-0 grey lighten-4">
-      <div class="nav-wrapper container">
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="logged-in">
-              <a href="userprofile.html" class="grey-text " data-target="profile">User Profile</a>
-            </li>
-            <li class="logged-in" >
-              <a href="login.html" class="grey-text" data-target="signOut">Logout</a>
-            </li>
-            <li class="logged-in" >
-              <a href="matched.html" class="grey-text " data-target="matched">Matched</a>
-            </li>
-            <li class="logged-out">
-              <a href="login.html" class="grey-text" data-target="login">Login</a>
-            </li>
-            <li class="logged-out" style="display: none;">
-              <a href="login.html" class="grey-text" data-target="signUp">Sign up</a>
-            </li>
-        </ul>
-      </div>
-    </nav>
+    <h1>Login</h1>
+    <div class="login">
+      <form id="login" method="get" action="login.php">
+          <label><b>Email</b></label>
+          <input type="text" name="email" id="email" placeholder="Email">
+          <br><br>
+          <label><b>Password</b></label>
+          <input type="Password" name="pw" id="pw" placeholder="Password">
+          <br><br>
+          <a class="button" href="/pages/main.html"><input type="button" name="log" id="log" value="Paw In"></a>
 
-<div style="text-align:center;"></div>
-  <h1>Login</h1>
-    <div id="formContainer">
-      <input type="email" placeholder="email" id="email"/>
-      <input type="password" placeholder="password" id="password"/>
-
-      <button onclick="signUp()" id="signUp">Paw Up </button>
-      <button onclick="signIn()" id="signIn">Paw In </button>
-      <button onclick="signOut()" id="signOut">Paw Out</button>
+          <br><br>
+          <a href="./signup.html">Create Account</a>
+      </form>
     </div>
-
 
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
