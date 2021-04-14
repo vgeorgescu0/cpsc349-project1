@@ -8,19 +8,21 @@
 </head>
 <body>
   <a href="./home.html">Complete Sign Up</a>
-  <h1>Sign Up</h1>
-  <div class="login">
-    <form id="login" method="get" action="login.php">
-        <label><b>Email</b></label>
-        <input type="text" name="email" id="email" placeholder="Email">
-        <br><br>
-        <label><b>Password</b></label>
-        <input type="Password" name="pw" id="pw" placeholder="Password">
-        <br><br>
-        <a class="button" href="/pages/main.html"><input type="button" name="log" id="log" value="Paw Up"></a>
-        <br><br>
-        <a href="./login.html">Back to Login</a>
-    </form>
-  </div>
-</body>
-</html>
+  <h1>Sign Up
+  </h1>
+    <div id="formContainer">
+      <input type="email" placeholder="email" id="email"/>
+      <input type="password" placeholder="password" id="password"/>
+  
+      <button onclick="signUp()" id="signUp">Confirm</button>
+      <button onclick="window.location.href='/pages/login.html'">Log In </button>
+  
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="/scripts/auth.js"></script>
+    <script src="/scripts/index.js"></script>
+  </body>
+  </html>
+  
