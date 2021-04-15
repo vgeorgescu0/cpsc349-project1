@@ -4,12 +4,12 @@ class Carousel {
 
       // add first two cards programmatically
       randomNum = Math.floor(Math.random() * 50) + 1
-      currentImageTop = "/img/dog" + randomNum + ".jpg"
+      currentImageTop = "img/dog" + randomNum + ".jpg"
       url = "url('" + currentImageTop + "')"
       this.push(url)
       
       randomNum = Math.floor(Math.random() * 50) + 1
-      currentImageBottom = "/img/dog" + randomNum + ".jpg"
+      currentImageBottom = "img/dog" + randomNum + ".jpg"
       url = "url('" + currentImageBottom + "')"
       this.push(url)
 
@@ -179,7 +179,7 @@ class Carousel {
                   // add new card
                   currentImageTop = currentImageBottom
                   randomNum = Math.floor(Math.random() * 50) + 1
-                  currentImageBottom = "/img/dog" + randomNum + ".jpg"
+                  currentImageBottom = "img/dog" + randomNum + ".jpg"
                   url = "url('" + currentImageBottom + "')"
                   this.push(url)
                   // handle gestures on new top card
